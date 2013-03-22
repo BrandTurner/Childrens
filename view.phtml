@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>webdev-candidate-project</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width">
+</head>
+<body>
+
+<h1>Latest News</h1>
+<!-- output news here (title, description, link, pubDate, etc) -->
+<?php 
+	foreach ($models as $model) {
+		echo "<div>";
+		echo "<h2>" . $model->title . "</h2>";
+		echo "<i>Published on: " . $model->pubDate . "</i>";
+		echo "<p>" . $model->description . "</p>";
+		echo "<a href=" . $model->link . ">Click here for more info</a>";
+	}
+?>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</body>
+</html>
